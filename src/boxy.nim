@@ -199,7 +199,7 @@ proc newBoxy*(
 
   result.layerNum = -1
 
-  when defined(emscripten):
+  when defined(emscripten) or defined(android) or defined(ios):
     result.atlasShader = newShader(
       ("atlasVert", toGLSL(atlasVert, "300 es", "precision highp float;\n")),
       ("atlasMain", toGLSL(atlasMain, "300 es", "precision highp float;\n"))
