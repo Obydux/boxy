@@ -1,17 +1,17 @@
 
-# Tilemap Example - Renders a huge tilemap using OpenGL 4.1 shaders
+# Tilemap Example - Renders a huge tilemap using OpenGL 3.3 shaders
 #
 # Features:
 # - 1024x1024 tilemap (over 1 million tiles!)
 # - Uses a 16x16 tile atlas (256 unique tiles)
-# - Custom OpenGL 4.1 shaders for efficient rendering
+# - Custom OpenGL 3.3 shaders for efficient rendering
 # - Pan with left mouse button, zoom with mouse wheel
 # - Generates random pattern with interesting tile variations
 #
 # The whole tilemap is rendered as a single quad using:
 # - Index texture: 1024x1024 R8 texture where each pixel is a tile index (0-255)
 # - Atlas texture: The tile atlas loaded from testTexture.png
-# - Custom OpenGL 4.1 fragment shader that samples the index, calculates atlas coordinates, and renders
+# - Custom OpenGL 3.3 fragment shader that samples the index, calculates atlas coordinates, and renders
 
 import boxy, opengl, pixie, windy, random, boxy/shaders
 
@@ -85,7 +85,7 @@ glGenerateMipmap(GL_TEXTURE_2D)
 
 # Vertex shader source (OpenGL 4.1)
 const vertexShaderSource = """
-#version 410 core
+#version 330 core
 
 layout (location = 0) in vec2 aPos;
 layout (location = 1) in vec2 aTexCoord;
@@ -102,7 +102,7 @@ void main() {
 
 # Fragment shader source (OpenGL 4.1)
 const fragmentShaderSource = """
-#version 410 core
+#version 330 core
 
 in vec2 TexCoord;
 out vec4 FragColor;

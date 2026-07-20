@@ -231,32 +231,32 @@ proc newBoxy*(
 
   else:
     result.atlasShader = newShader(
-      ("atlasVert", toGLSL(atlasVert, "410", "")),
-      ("atlasMain", toGLSL(atlasMain, "410", ""))
+      ("atlasVert", toGLSL(atlasVert, "330", "")),
+      ("atlasMain", toGLSL(atlasMain, "330", ""))
     )
     result.maskShader = newShader(
-      ("atlasVert", toGLSL(atlasVert, "410", "")),
-      ("maskMain", toGLSL(maskMain, "410", ""))
+      ("atlasVert", toGLSL(atlasVert, "330", "")),
+      ("maskMain", toGLSL(maskMain, "330", ""))
     )
     result.blendShader = newShader(
-      ("atlasVert", toGLSL(atlasVert, "410", "")),
-      ("blendingMain", toGLSL(blendingMain, "410", ""))
+      ("atlasVert", toGLSL(atlasVert, "330", "")),
+      ("blendingMain", toGLSL(blendingMain, "330", ""))
     )
     result.blurXShader = newShader(
-      ("atlasVert", toGLSL(atlasVert, "410", "")),
-      ("blendingMain", toGLSL(blurXMain, "410", ""))
+      ("atlasVert", toGLSL(atlasVert, "330", "")),
+      ("blendingMain", toGLSL(blurXMain, "330", ""))
     )
     result.blurYShader = newShader(
-      ("atlasVert", toGLSL(atlasVert, "410", "")),
-      ("blendingMain", toGLSL(blurYMain, "410", ""))
+      ("atlasVert", toGLSL(atlasVert, "330", "")),
+      ("blendingMain", toGLSL(blurYMain, "330", ""))
     )
     result.spreadXShader = newShader(
-      ("atlasVert", toGLSL(atlasVert, "410", "")),
-      ("spreadXMain", toGLSL(spreadXMain, "410", ""))
+      ("atlasVert", toGLSL(atlasVert, "330", "")),
+      ("spreadXMain", toGLSL(spreadXMain, "330", ""))
     )
     result.spreadYShader = newShader(
-      ("atlasVert", toGLSL(atlasVert, "410", "")),
-      ("spreadYMain", toGLSL(spreadYMain, "410", ""))
+      ("atlasVert", toGLSL(atlasVert, "330", "")),
+      ("spreadYMain", toGLSL(spreadYMain, "330", ""))
     )
 
   result.positions.buffer = Buffer()
